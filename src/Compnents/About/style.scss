@@ -1,0 +1,49 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 12px;
+  padding: 42px;
+
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    width: 100%;
+    max-width: 1200px;
+
+    .about-lawyer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 80%;
+
+      @media screen and (max-width: 1150px) {
+        flex-direction: column-reverse;
+        width: 100%;
+      }
+
+      p {
+        max-width: 500px;
+
+      }
+
+      .lawyer-name {
+        font-size: 62px;
+        color: #747264;
+      }
+
+      &:nth-child(even) {
+        flex-direction: row-reverse;
+        align-self: flex-end;
+
+        @media screen and (max-width: 1150px) {
+          flex-direction: column-reverse;
+        }
+
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+.parallax-wrapper {
+  .parallax {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../assets/backgrounds/sean-pollock.jpg');
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.3); /* Black overlay with 50% opacity */
+      z-index: 1;
+    }
+  }
+
+  .parallax-office-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 100;
+
+    .title-main {
+      font-size: 74px;
+      white-space: nowrap;
+      @media screen and (max-width: 752px) {
+        font-size: 52px;
+      }
+
+    }
+
+    .title-secondary {
+      font-size: 52px;
+      white-space: nowrap;
+      @media screen and (max-width: 752px) {
+        font-size: 32px;
+      }
+    }
+
+    .title-services {
+      direction: rtl;
+      ul {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 22px;
+
+        li {
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+  }
+}
