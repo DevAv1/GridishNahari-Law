@@ -8,6 +8,7 @@ import {LocationMap} from "./Compnents/LocationMap/index.jsx";
 import {ClientRecommend} from "./Compnents/ClientRecommend/index.jsx";
 import {Contact} from "./Compnents/Contact/index.jsx";
 import {Footer} from "./Compnents/Footer/index.jsx";
+import ArticleSlideShow from "./Compnents/ClientsLettersSlideShow/index.jsx";
 
 export const App = () => {
     return (
@@ -17,7 +18,7 @@ export const App = () => {
             <About/>
             <SecondaryParallax/>
             <Services/>
-            <ClientRecommend/>
+            <ArticleSlideShow/>
             <LocationMap/>
             <Contact/>
             <Footer/>

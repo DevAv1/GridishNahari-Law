@@ -4,12 +4,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('../../assets/backgrounds/sean-pollock.jpg');
     height: 100vh;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-image: url('../../assets/backgrounds/sean-pollock.jpg');
+
+    @media screen and (max-width: 752px) {
+      background-attachment: inherit;
+    }
 
     &:before {
       content: '';
@@ -41,7 +45,6 @@
       @media screen and (max-width: 752px) {
         font-size: 52px;
       }
-
     }
 
     .title-secondary {

@@ -212,7 +212,8 @@ $width: 320px;
   }
 
   .btn-box {
-    text-align: center;
-    margin: 50px 0;
+    display: flex;
+    gap: 4px;
+    justify-content: center;
   }
 }

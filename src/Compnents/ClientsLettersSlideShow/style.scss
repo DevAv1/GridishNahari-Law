@@ -1,0 +1,68 @@
+$transition-speed: 1.5s;
+$dot-size: 15px;
+$dot-background: #bbb;
+$dot-active-background: #717171;
+
+.clients-letters-slideshow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 42px 12px;
+
+  .slideshow-container {
+    position: relative;
+    max-width: 600px; // Adjust based on your layout
+    margin: auto;
+    overflow: hidden;
+    padding: 42px 0;
+    min-height: 500px;
+
+    .slide {
+      display: none; // Hide slides by default
+      opacity: 0; // Start with slides fully transparent
+      transition: opacity $transition-speed ease-in-out; // Smooth transition for the fade effect
+
+      &.show {
+        display: block; // Show the current slide
+        opacity: 1; // Make the current slide fully visible
+      }
+
+      &:not(.show) {
+        opacity: 0; // Ensure fade effect works only when a slide becomes active
+      }
+    }
+
+    .article-content {
+      padding: 20px;
+
+      .article-title {
+        font-size: 22px;
+      }
+
+      .article-p {
+        font-size: 14px;
+      }
+    }
+
+    .dot-container {
+      text-align: center;
+      padding: 20px 0;
+
+      .dot {
+        cursor: pointer;
+        height: $dot-size;
+        width: $dot-size;
+        margin: 0 5px;
+        background-color: $dot-background;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+
+        &:hover,
+        &.active {
+          background-color: $dot-active-background;
+        }
+      }
+    }
+  }
+}

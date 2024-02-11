@@ -52,7 +52,6 @@ export const Contact = () => {
                     <div className="btn-box">
                         <button className="btn btn-submit" type="submit">שלח</button>
                         <button className="btn btn-cancel" type="button">איפוס</button>
-                        <h5>מחכים לשמוע מכם...<span className="emoji">&#x1F609;</span></h5>
                     </div>
                 </form>
             </div>

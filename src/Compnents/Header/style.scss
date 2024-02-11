@@ -61,7 +61,7 @@
     background: rgba(255, 255, 255, 0.63);
     color: black;
     position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
     top: 0; /* Set to the top of the viewport */
     z-index: 1000; /* Ensure the header is above other content */
     height: 70px;
