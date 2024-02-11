@@ -20,7 +20,13 @@ $width: 320px;
     display: flex;
     align-self: center;
     justify-content: center;
-    width: 55%;
+    flex-wrap: wrap;
+    width: 50%;
+    gap: 42px;
+    padding-top: 42px;
+
+    .contact-form {
+    }
 
     .address-container {
       display: flex;
@@ -57,7 +63,6 @@ $width: 320px;
   // FORM // ============================== //
   form {
     width: $width;
-    margin: 45px;
 
     h1 {
       font-size: 3em;

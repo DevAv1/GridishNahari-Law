@@ -6,10 +6,9 @@
 
   .services-items-wrapper {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 42px;
-    width: 80%;
     padding-top: 42px;
 
     .service-item {
@@ -25,14 +24,17 @@
         align-items: center;
         gap: 42px;
         font-size: 18px;
+
         img {
           width: 32px;
         }
       }
 
       .service-description {
-          max-width: 150px;
+        min-width: 150px;
+        white-space: nowrap;
+
       }
-  }
+    }
   }
 }

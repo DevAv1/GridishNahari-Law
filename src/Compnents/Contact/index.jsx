@@ -23,7 +23,7 @@ export const Contact = () => {
     };
     return (
 
-        <div className="contact">
+        <div className="contact" id="contact-section">
             <div className="section-header">יצירת קשר</div>
             <div className="contact-us-wrapper">
                 <div className="address-container">
@@ -36,7 +36,7 @@ export const Contact = () => {
                     <a className="click-link">law@gmail.com</a>
                     <span>08:00 - 20:00</span>
                 </div>
-                <form onSubmit={handleSubmit}>
+                <form className="contact-form" onSubmit={handleSubmit}>
                     <div className="group">
                         <input onChange={(e) => handleChange(e)} name="firstName" type="text" required="required"/><span className="highlight"></span><span className="bar"></span>
                         <label>שם פרטי</label>
@@ -52,7 +52,7 @@ export const Contact = () => {
                     <div className="btn-box">
                         <button className="btn btn-submit" type="submit">שלח</button>
                         <button className="btn btn-cancel" type="button">איפוס</button>
-                        <h5>מחכים לשמוע מכם...<span class="emoji">&#x1F609;</span></h5>
+                        <h5>מחכים לשמוע מכם...<span className="emoji">&#x1F609;</span></h5>
                     </div>
                 </form>
             </div>

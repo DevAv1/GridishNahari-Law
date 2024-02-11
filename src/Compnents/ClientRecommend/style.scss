@@ -7,21 +7,32 @@
   .client-recommend-wrapper {
     display: flex;
     flex-wrap: wrap;
-    padding-top: 42px;
+    justify-content: center;
+    padding-top: 52px;
     gap: 12px;
-    max-width: 1218px;
-
 
     .client-recommend-item {
       display: flex;
       justify-content: center;
       padding: 22px;
-      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-      background: rgba(255, 255, 255, 0.39);
+      position: relative;
       border-radius: 12px;
-      min-width: 400px;
+      max-width: 400px;
+      transition: 0.2s ease-in-out;
+
+      &:before {
+        position: absolute;
+        content: url("../../assets/icons/comment-bubble.svg");
+        width: 22px;
+        height: 22px;
+        top: 0;
+        right: 6px;
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+      }
 
       .client-recommendation {
+
       }
     }
   }

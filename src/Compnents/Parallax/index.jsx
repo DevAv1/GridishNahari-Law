@@ -1,5 +1,21 @@
 import './style.scss';
+import {useEffect} from "react";
+
 export const Parallax = () => {
+    useEffect(() => {
+        const handleScroll = () => {
+            const parallax = document.querySelector('.parallax');
+            const scrollPosition = window.pageYOffset;
+            parallax.style.backgroundPositionY = 0 + 'px';
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
         <div className="parallax-wrapper">
             <div className="parallax">
