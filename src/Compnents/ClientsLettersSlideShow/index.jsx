@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react';
-import './style.scss'; // Assume styles are moved to this CSS file
+import './style.scss';
 
 const articles = [
     {
-        title: '10/12/2012',
+        date: '10/12/2012',
         content: '      "  יפית שלום\n' +
             '                        שהחלטתי שאני חייבת לקום ולעזוב את הבית שלי ,לא ידעתי מהן  הזכיות שלי   , לא תיארתי לעצמי שיש לי את הכוחות לבצע את התהליך שניקרא גירושים והייתי מבולבלת . ופה הגיעו הצמד המנצח יפית וגל נהרי הם היו זמינים תמיד לכל שאלה.תמיד היו לי כאוזן קשבת .ובעיקר נתנו לי תקווה שהכל יהיה בסדר שאין לי מה לדאוג מבחינה כלכלית , ובעיקר לזכיות של הילדים שלי .\n' +
             '                        ניתנו החלטות טובות בטיפולם המסור , ובסיועם הגענו להסכמות ברוח טובה ולסיום ההליכים בצורה טובה.\n' +
@@ -11,24 +11,24 @@ const articles = [
     }
     ,
     {
-        title: '10/12/2012',
+        date: '10/12/2012',
         content: '"ענבר היקרה ,תודה על הייצוג בעסקת מקרקעין מורכבת, אין ספק שאת האדם המתאים ליצוג בעסקאות מקרקעין.בזכותך החוזה מול החברה הקבלנית שופר , טיפלת במקצועיות במו"מ וגם ברישום ובסוגית המיסוי. בברכה,בניאל י\'. פתח תקווה\n' +
             '"'
     },
     {
-        title: '10/12/2012',
+        date: '10/12/2012',
         content: '    " יפית היקרה\n' +
             '                        שמעתי את ההודעה המשמחת\n' +
             '                        אכן , נעשה פה צדק איתי\n' +
             '                        אני מודה לך שהייתם השליחים שלי , תודה רבה על הכל."'
     },
     {
-        title: '10/12/2012',
+        date: '10/12/2012',
         content: '"                        נבר היקרה , תודה על המיומנות והמקצועיות ביצוג בעסקאות מכר של קניה ומכירה שביצעת עבורנו.יצגת אותנו ביסודיות,מסירות ומקצועיות אין קץ,פתרת לנו בעיות סבוכות בסוגיית המיסוי.מקווים שנהנת מהמתנה הצנועה ששלחנו לך ,את ראויה להרבה יותר מזה .תודה רבה,עדנה ויוסי יצחק.\n' +
             '"       '
     },
     {
-        title: '10/12/2012',
+        date: '10/12/2012',
         content: '      "  יפית,\n' +
             '                        ברצוננו להודות לך מקרב הלב על הנכונות, האכפתיות והעזרה הרבה שנתת לנו ולמשפחתנו במשך תקופה ארוכה.\n' +
             '                        היית קשובה לבעיותינו וגילית מעורבות בנושא רגיש וכאוב ובכל עת שפנינו אליך לבקשת עצה ועזרה התפנית לענות לנו, לייעץ ולעזור, בסבלנות, ברגישות ובמקצועיות, דבר שהקל עלינו מאוד ביודענו שתעשי כל שביכולתך על מנת למצוא דרך לפתור את הבעיה הקשה בה היינו.\n' +
@@ -37,7 +37,7 @@ const articles = [
             '                        משפחת שמואלי"'
     },
     {
-        title: '10/12/2012',
+        date: '10/12/2012',
         content: '    " לענבר עורכת הדין המקסימה,🌹❤\n' +
             '                        תודה לך על העזרה\n' +
             '                        תודה על המקצועיות שלך בתור עורכת דין והידע המשפטי,\n' +
@@ -45,8 +45,7 @@ const articles = [
             '                        תודה לך על יחס חם אכפתיות ואדיבות מכל הלב בכל זמן ושעה,\n' +
             '                        אין עליך תודה לך ❤\n' +
             '                        מעריכה מאוד  מלי, ראש העין."'
-    },
-    // Add more articles as needed
+    }
 ];
 
 const ArticleSlideShow = () => {
@@ -67,22 +66,23 @@ const ArticleSlideShow = () => {
     };
 
     return (
-        <div className="clients-letters-slideshow">
+        <div className="clients-letters-slideshow" id="clients-letters-slideshow">
             <div className="section-header">לקוחות ממליצים</div>
 
             <div className="slideshow-container">
-                {articles.map((article, index) => (
-                    <div
-                        key={index}
-                        className={`slide fade ${index === currentSlide ? 'show' : ''}`}
-                    >
-                        <div className="article-content">
-                            <span className="article-title">{article.title}</span>
-                            <p className="article-p">{article.content}</p>
+                <div className="articles-wrapper">
+                    {articles.map((article, index) => (
+                        <div
+                            key={index}
+                            className={`slide fade ${index === currentSlide ? 'show' : ''}`}
+                        >
+                            <div className="article-content">
+                                <span className="article-title">{article.date}</span>
+                                <p className="article-p">{article.content}</p>
+                            </div>
                         </div>
-                    </div>
-                ))}
-
+                    ))}
+                </div>
                 <div className="dot-container">
                     {articles.map((_, index) => (
                         <span

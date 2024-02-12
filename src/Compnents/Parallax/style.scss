@@ -22,7 +22,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: rgba(0, 0, 0, 0.3); /* Black overlay with 50% opacity */
+      background: rgba(0, 0, 0, 0.4); /* Black overlay with 50% opacity */
       z-index: 1;
     }
   }
@@ -36,8 +36,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
-    z-index: 100;
+    color: #fafafa;
+    z-index: 12;
 
     .title-main {
       font-size: 74px;
@@ -57,18 +57,8 @@
 
     .title-services {
       direction: rtl;
-      ul {
-        display: flex;
-        flex-direction: row-reverse;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 22px;
+      white-space: nowrap;
 
-        li {
-          margin: 0;
-          padding: 0;
-        }
-      }
     }
   }
 }

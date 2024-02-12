@@ -2,7 +2,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 42px 0;
+  background: #FAFAFA;
+  border-top: 1px solid #747264;
+  min-height: 600px;
 
   .services-items-wrapper {
     display: flex;
@@ -10,11 +14,11 @@
     justify-content: center;
     gap: 42px;
     padding-top: 42px;
+    max-width: 800px;
 
     .service-item {
       display: flex;
       align-items: center;
-      justify-content: center;
       flex-direction: column;
       gap: 12px;
       @media screen and (max-width: 1150px) {
@@ -29,13 +33,16 @@
         font-size: 18px;
 
         img {
-          width: 32px;
+          width: 22px;
         }
       }
 
       .service-description {
-        min-width: 150px;
-        white-space: nowrap;
+        max-width: 200px;
+
+        span {
+
+        }
 
       }
     }

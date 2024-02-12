@@ -10,6 +10,9 @@ $dot-active-background: #717171;
   padding: 42px 12px;
 
   .slideshow-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     position: relative;
     max-width: 600px; // Adjust based on your layout
     margin: auto;
@@ -36,7 +39,8 @@ $dot-active-background: #717171;
       padding: 20px;
 
       .article-title {
-        font-size: 22px;
+        font-size: 14px;
+        color: #747264;
       }
 
       .article-p {

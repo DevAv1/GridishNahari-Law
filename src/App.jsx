@@ -9,11 +9,13 @@ import {ClientRecommend} from "./Compnents/ClientRecommend/index.jsx";
 import {Contact} from "./Compnents/Contact/index.jsx";
 import {Footer} from "./Compnents/Footer/index.jsx";
 import ArticleSlideShow from "./Compnents/ClientsLettersSlideShow/index.jsx";
+import {useState} from "react";
 
 export const App = () => {
+    const [isMenu, setIsMenu] = useState(false);
     return (
-        <div className="app" id="home">
-            <Header/>
+        <div className={`app ${isMenu && 'app-no-scroll'}`} id="home">
+            <Header onMenuOpen={() => setIsMenu(!isMenu)}/>
             <Parallax/>
             <About/>
             <SecondaryParallax/>

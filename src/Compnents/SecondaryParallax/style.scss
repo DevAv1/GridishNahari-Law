@@ -12,6 +12,7 @@
     background-size: cover;
     @media screen and (max-width: 752px) {
       background-attachment: inherit;
+      background-size: cover;
     }
 
     &:before {

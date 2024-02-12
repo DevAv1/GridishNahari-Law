@@ -15,18 +15,22 @@ export const Services = () => {
                         <img src={Family} alt="family"/>
                         <span>דיני משפחה</span>
                     </div>
-                    <span>
-                        פה יכתב בכמה מילים תמצות של הכותרת
-                    </span>
+                    <div className="service-description">
+                        <span>
+                            גירושין ,מזונות ,משמורת ,כתובה,הגירה ,הסכם ממון ,הסכם שלום בית ,צו הרחקה ,הגירה,אמנת האג.
+                        </span>
+                    </div>
                 </div>
                 <div className="service-item">
                     <div className="service-header">
                         <img src={Damage} alt="family"/>
                         <span>נזיקין</span>
                     </div>
-                    <span>
-                        פה יכתב בכמה מילים תמצות של הכותרת
-                    </span>
+                    <div className="service-description">
+                        <span>
+                            תביעת רשלנות / תביעה בגין תאונת דרכים או תאונת עבודה .
+                        </span>
+                    </div>
                 </div>
                 <div className="service-item">
                     <div className="service-header">
@@ -35,7 +39,7 @@ export const Services = () => {
                     </div>
                     <div className="service-description">
                          <span>
-                            פה יכתב בכמה מילים תמצות של הכותרת
+                           עסקאות מכר, שכירות, רישום הערות, בתים משותפים, מכתבי אזהרה, מיסוי מקרקעין, פינוי בינוי/תמ"א.
                         </span>
                     </div>
                 </div>

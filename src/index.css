@@ -17,6 +17,10 @@ html, body {
   color: #141414;
   white-space: nowrap;
 
+  @media screen and (max-width: 752px) {
+    font-size: 26px;
+  }
+
   &:after {
     content: '';
     position: absolute;

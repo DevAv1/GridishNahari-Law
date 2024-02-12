@@ -19,7 +19,6 @@ export const Contact = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(contactInfo);
-        alert('Form submitted. Thank you!');
     };
     return (
 
@@ -51,7 +50,6 @@ export const Contact = () => {
                     </div>
                     <div className="btn-box">
                         <button className="btn btn-submit" type="submit">שלח</button>
-                        <button className="btn btn-cancel" type="button">איפוס</button>
                     </div>
                 </form>
             </div>

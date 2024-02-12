@@ -1,6 +1,10 @@
 .app {
   background: #F3F3F3;
   min-height: 100vh;
+
+  &.app-no-scroll {
+    overflow: hidden;
+  }
 }
 
 // chinese-black: #141414
@@ -10,3 +14,4 @@
 // grey text: #747264
 // darkBrown text: #3C3633
 // link: #A7D8E8
+// goldLogo: #EDB868

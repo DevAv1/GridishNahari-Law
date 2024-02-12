@@ -1,6 +1,4 @@
-import './style.scss';
-
-export const Footer = () => {
+export const HamburgerMenu = ({isShow, onMenuSelect}) => {
     const handleClickScroll = (section) => {
         const isHome = section === 'home';
         const element = document.getElementById(section);
@@ -11,22 +9,17 @@ export const Footer = () => {
                 inline: !isHome ? "center" : "start"
             });
         }
+        onMenuSelect?.();
     };
     return (
-        <div className="footer">
-            <div className="right-footer">
-                <span className="office-name">גרידיש נהרי משרד עורכי דין</span>
-            </div>
-            <nav className="nav-items">
+        <div className={`hamburger-menu ${isShow && 'hamburger-menu-active'}`}>
+            <ul className="hamburger-menu-items-wrapper">
                 <span onClick={() => handleClickScroll('home')}>בית</span>
                 <span onClick={() => handleClickScroll('about-section')}>אודות</span>
                 <span onClick={() => handleClickScroll('services-section')}>תחומי עיסוק</span>
                 <span onClick={() => handleClickScroll('clients-letters-slideshow')}>לקוחות ממליצים</span>
                 <span onClick={() => handleClickScroll('contact-section')}>צור קשר</span>
-            </nav>
-            <div className="left-footer">
-
-            </div>
+            </ul>
         </div>
     )
 }
