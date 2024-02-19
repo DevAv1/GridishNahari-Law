@@ -1,11 +1,24 @@
+import {useRef} from 'react';
 import './style.scss';
+import { useInView } from "framer-motion";
 
 export const About = () => {
+    const refLawyerOne = useRef(null);
+    const refLawyerTwo = useRef(null);
+    const isInViewFirst = useInView(refLawyerOne, { once: true });
+    const isInViewSecond = useInView(refLawyerTwo, { once: true });
+
     return (
         <div className="about" id="about-section">
             <span className="section-header">אודות</span>
             <div className="about-content">
-                <div className="about-lawyer">
+                <div className="about-lawyer" ref={refLawyerOne}
+                     style={{
+                        transform: isInViewFirst ? "none" : "translateX(-200px)",
+                        opacity: isInViewFirst ? 1 : 0,
+                        transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
+                        }}
+                >
                     <p>
                         עורכת דין יפית נהרי ,הינה עו"ד עצמאית מזה כ- 16 שנה .עו"ד נהרי מתמחה בתחום דיני המשפחה(גירושין)
                         ,התרת נישואין צוואות ירושות,חוק הנוער,הגירה ,ידועים בציבור וליטיגציה אזרחית ומטפלת גם בלקוחות
@@ -19,7 +32,13 @@ export const About = () => {
                     </p>
                     <span className="lawyer-name">יפית נהרי</span>
                 </div>
-                <div className="about-lawyer">
+                <div className="about-lawyer" ref={refLawyerTwo}
+                         style={{
+                            transform: isInViewSecond ? "none" : "translateX(-200px)",
+                            opacity: isInViewSecond ? 1 : 0,
+                            transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
+                            }}
+                >
                     <p>
                         עורכת דין ענבר גרידיש בוגרת אוניברסיטת רייכמן ובוגרת אוניברסיטת חיפה. LL.B, M.B.A מוסמכת בניהול
                         נדל"ן ושמאות ועורכת דין מוסמכת לענייני מקרקעין.

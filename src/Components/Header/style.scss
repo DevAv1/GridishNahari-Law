@@ -1,6 +1,6 @@
 .header {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-content: center;
   position: absolute;
   top: 0;
@@ -12,11 +12,15 @@
   z-index: 100;
   transition: 0.2s ease-in-out;
 
+  @media screen and (max-width: 752px) {
+    display: 60px;
+  }
+
   .header-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    width: 1218px;
 
     .contact-tools {
       display: flex;

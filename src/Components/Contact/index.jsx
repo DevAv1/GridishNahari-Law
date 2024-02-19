@@ -26,23 +26,26 @@ export const Contact = () => {
             <div className="section-header">יצירת קשר</div>
             <div className="contact-us-wrapper">
                 <div className="address-container">
-                    <span>שדרות בנימין 130, נתניה, ישראל</span>
-                    <span>קומה 3, בניין B</span>
-
-                    <a className="click-link">+972-02-333333</a>
-                    <a className="click-link">+972-02-333333</a>
-                    <a className="click-link">+972-02-333333</a>
-                    <a className="click-link">law@gmail.com</a>
+                    <span>אלברט אינשטיין 14, ראש העין</span>
+                    <div className="lawyer-phone">
+                        <span>ענבר גרידיש -</span>
+                        <a className="click-link">+972 52-466-4540</a>
+                    </div>
+                    <div className="lawyer-phone">
+                        <span>יפית נהרי -</span>
+                        <a className="click-link">+972 54-682-5784</a>
+                    </div>
+                    <a className="click-link">gn-lawfirm@gmail.com</a>
                     <span>08:00 - 20:00</span>
                 </div>
                 <form className="contact-form" onSubmit={handleSubmit}>
                     <div className="group">
                         <input onChange={(e) => handleChange(e)} name="firstName" type="text" required="required"/><span className="highlight"></span><span className="bar"></span>
-                        <label>שם פרטי</label>
+                        <label>שם מלא</label>
                     </div>
                     <div className="group">
                         <input onChange={(e) => handleChange(e)} name="lastName" type="text" required="required"/><span className="highlight"></span><span className="bar"></span>
-                        <label>שם משפחה</label>
+                        <label>אימייל</label>
                     </div>
                     <div className="group">
                         <textarea onChange={(e) => handleChange(e)} name="message" type="textarea" rows="5" required="required"></textarea><span className="highlight"></span><span className="bar"></span>

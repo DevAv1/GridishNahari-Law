@@ -17,5 +17,10 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
+    'react/react-in-jsx-scope': 'off', // React 17+ doesn't require React to be in scope
+    'react/prop-types': 'off', // Disable prop-types rule, useful if you're using TypeScript
+    'no-unused-vars': ['warn', { vars: 'all', args: 'after-used', ignoreRestSiblings: false }],
+    'no-console': 'warn', // Warn about console logs
+    'eqeqeq': ['warn', 'always'], // Enforce strict equality
   },
 }

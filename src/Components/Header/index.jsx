@@ -5,7 +5,10 @@ import Phone from '../../assets/icons/phone.svg';
 import Email from '../../assets/icons/email.svg';
 import Location from '../../assets/icons/location.svg';
 import Logo from '../../assets/icons/logo-trans.png';
+import Whatsapp from '../../assets/icons/whatsapp.png';
+
 import {HamburgerMenu} from "./HaburgerMenu.jsx";
+
 export const Header = ({onMenuOpen}) => {
     const [scrolled, setScrolled] = useState(false);
     const [hamburgerMenu, setHamburgerMenu] = useState(false);
@@ -60,6 +63,7 @@ export const Header = ({onMenuOpen}) => {
                     <img src={Location} alt='phone' />
                     <img src={Email} alt='email' />
                     <img src={Phone} alt='location' />
+                    <img src={Whatsapp} alt='whatsapp' />
                 </div>
             </div>
         </div>

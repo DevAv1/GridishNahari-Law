@@ -1,0 +1,103 @@
+.services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 42px 0;
+  background: #FAFAFA;
+  border-top: 1px solid #747264;
+  min-height: 600px;
+  .services-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 50%;
+
+    @media screen and (max-width: 1150px) {
+      max-width: unset;
+      padding: 0 12px;
+    }
+      .services-items-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 42px;
+        padding-top: 42px;
+    
+        .services-nav{
+          display: flex;
+          align-items: flex-start;
+          flex-direction: column;
+          width: 100%;
+          gap: 12px;
+          @media screen and (max-width: 1150px) {
+            align-items: flex-start;
+          }
+    
+          .service-pick {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 12px;
+            font-size: 18px;
+            padding: 4px 12px;
+            transition: 0.2s ease-in-out;
+    
+            &.active-service {
+              background: #EDB868;
+              color: white;
+              border-radius: 12px;
+            }
+    
+            &:hover {
+              background: #EDB868;
+              color: white;
+              cursor: pointer;
+              border-radius: 12px;
+            }
+    
+            img {
+              width: 22px;
+            }
+          }
+        }
+      }
+      .service-descriptions-wrapper {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+
+        .service-description {
+          display: none;
+          &.show {
+            display: flex;
+          }
+
+          ul {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            padding-right: 0;
+            li {
+              list-style: none;
+              white-space: no-wrap;
+              font-size: 18px;
+              @media screen and (max-width: 786px) {
+                font-size: 14px;
+              }
+              img {
+                width: 10px;
+                transform: rotate(45deg);
+                animation: bulletAnimation 0.5s;
+              }
+            }
+          }
+        }
+      }
+  }
+}
+
+@keyframes bulletAnimation {
+  from { transform: scale(0) rotate(45deg); opacity: 0; }
+  to { transform: scale(1) rotate(45deg); opacity: 1;}
+}

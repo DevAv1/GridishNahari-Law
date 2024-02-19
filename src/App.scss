@@ -1,11 +1,23 @@
 .app {
   background: #F3F3F3;
   min-height: 100vh;
+  overflow: hidden;
 
   &.app-no-scroll {
     overflow: hidden;
   }
+  .progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999999;
+    height: 10px;
+    background: #EDB868;
+    transform-origin: 0%;
+  }
 }
+
 
 // chinese-black: #141414
 // Anti-Flash White: #F3F3F3

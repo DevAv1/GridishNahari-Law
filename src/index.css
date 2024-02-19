@@ -25,9 +25,10 @@ html, body {
     content: '';
     position: absolute;
     bottom: -10px;
-    left: 0;
-    width: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
     height: 2px;
-    background: #141414;
+    background: #EDB868;
   }
 }

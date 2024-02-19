@@ -4,12 +4,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('../../assets/backgrounds/giammarco-boscaro.jpg');
+    background-image: url('../../assets/backgrounds/222.png');
     height: 40vh;
     background-attachment: fixed;
-    background-position: center;
+    background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
+
     @media screen and (max-width: 752px) {
       background-attachment: inherit;
       background-size: cover;

@@ -56,10 +56,10 @@ const ArticleSlideShow = () => {
             setCurrentSlide((prevSlide) =>
                 prevSlide === articles.length - 1 ? 0 : prevSlide + 1
             );
-        }, 12000);
+        }, 5000);
 
         return () => clearTimeout(timer);
-    }, [currentSlide, articles.length]);
+    }, [currentSlide]);
 
     const goToSlide = (index) => {
         setCurrentSlide(index);
