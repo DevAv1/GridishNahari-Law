@@ -24,7 +24,7 @@ const articles = [
     },
     {
         date: '10/12/2012',
-        content: '"                        נבר היקרה , תודה על המיומנות והמקצועיות ביצוג בעסקאות מכר של קניה ומכירה שביצעת עבורנו.יצגת אותנו ביסודיות,מסירות ומקצועיות אין קץ,פתרת לנו בעיות סבוכות בסוגיית המיסוי.מקווים שנהנת מהמתנה הצנועה ששלחנו לך ,את ראויה להרבה יותר מזה .תודה רבה,עדנה ויוסי יצחק.\n' +
+        content: '"                        ענבר היקרה , תודה על המיומנות והמקצועיות ביצוג בעסקאות מכר של קניה ומכירה שביצעת עבורנו.יצגת אותנו ביסודיות,מסירות ומקצועיות אין קץ,פתרת לנו בעיות סבוכות בסוגיית המיסוי.מקווים שנהנת מהמתנה הצנועה ששלחנו לך ,את ראויה להרבה יותר מזה .תודה רבה,עדנה ויוסי יצחק.\n' +
             '"       '
     },
     {
@@ -38,12 +38,12 @@ const articles = [
     },
     {
         date: '10/12/2012',
-        content: '    " לענבר עורכת הדין המקסימה,🌹❤\n' +
+        content: '    " לענבר עורכת הדין המקסימה,\n' +
             '                        תודה לך על העזרה\n' +
             '                        תודה על המקצועיות שלך בתור עורכת דין והידע המשפטי,\n' +
             '                        ובכך פתרת לי בעיה עם לקוח קשה,\n' +
             '                        תודה לך על יחס חם אכפתיות ואדיבות מכל הלב בכל זמן ושעה,\n' +
-            '                        אין עליך תודה לך ❤\n' +
+            '                        אין עליך תודה לך \n' +
             '                        מעריכה מאוד  מלי, ראש העין."'
     }
 ];
@@ -67,7 +67,7 @@ const ArticleSlideShow = () => {
 
     return (
         <div className="clients-letters-slideshow" id="clients-letters-slideshow">
-            <div className="section-header">לקוחות ממליצים</div>
+            <div className="section-header light-ver">לקוחות ממליצים</div>
 
             <div className="slideshow-container">
                 <div className="articles-wrapper">

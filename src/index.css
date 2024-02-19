@@ -16,7 +16,13 @@ html, body {
   font-size: 32px;
   color: #141414;
   white-space: nowrap;
+  &.light-ver {
+    color: white;
 
+    &:after {
+      background-color: white;
+    }
+  }
   @media screen and (max-width: 752px) {
     font-size: 26px;
   }

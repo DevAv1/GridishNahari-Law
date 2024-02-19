@@ -9,6 +9,7 @@
   min-height: 600px;
   .services-content {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     max-width: 50%;
@@ -19,10 +20,14 @@
     }
       .services-items-wrapper {
         display: flex;
-        flex-wrap: wrap;
         justify-content: center;
         gap: 42px;
         padding-top: 42px;
+
+        @media screen and (max-width: 752px) {
+          flex-wrap: wrap;
+          gap: 6px;
+        }
     
         .services-nav{
           display: flex;
@@ -30,8 +35,10 @@
           flex-direction: column;
           width: 100%;
           gap: 12px;
+          padding-bottom: 22px;
           @media screen and (max-width: 1150px) {
             align-items: flex-start;
+            width: auto;
           }
     
           .service-pick {
@@ -42,11 +49,25 @@
             font-size: 18px;
             padding: 4px 12px;
             transition: 0.2s ease-in-out;
+            font-size: 18px;
+            color: gray;
+            opacity: 0.8;
+            @media screen and (max-width: 752px) {
+              padding: 4px 8px;
+              gap: 4px;
+            }
+            span {
+              text-wrap: nowrap;
+              @media screen and (max-width: 752px) {
+                font-size: 12px;
+              }
+            }
     
             &.active-service {
               background: #EDB868;
               color: white;
               border-radius: 12px;
+              opacity: 1;
             }
     
             &:hover {
@@ -65,19 +86,27 @@
       .service-descriptions-wrapper {
         display: flex;
         width: 100%;
+        min-height: 300px;
         justify-content: center;
 
         .service-description {
           display: none;
+          width: 100%;
           &.show {
             display: flex;
+            max-height: 100px;
           }
 
           ul {
             display: flex;
             flex-direction: column;
+            align-items: flex-start;
+            flex-wrap: wrap;
             gap: 4px;
             padding-right: 0;
+            width: 100%;
+            gap: 12px;
+
             li {
               list-style: none;
               white-space: no-wrap;

@@ -4,12 +4,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('../../assets/backgrounds/222.png');
+    background-image: url('../../assets/backgrounds/law-hammer.jpg');
     height: 40vh;
     background-attachment: fixed;
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
+
 
     @media screen and (max-width: 752px) {
       background-attachment: inherit;
@@ -23,7 +24,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: rgba(0, 0, 0, 0.3); /* Black overlay with 50% opacity */
+      background: rgba(0, 0, 0, 0.2); /* Black overlay with 50% opacity */
       z-index: 1;
     }
   }

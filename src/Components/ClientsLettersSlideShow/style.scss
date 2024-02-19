@@ -8,6 +8,7 @@ $dot-active-background: #717171;
   flex-direction: column;
   align-items: center;
   padding: 42px 12px;
+  background-color: rgba(181, 146, 31, 0.66);
 
   .slideshow-container {
     display: flex;
@@ -18,7 +19,7 @@ $dot-active-background: #717171;
     margin: auto;
     overflow: hidden;
     padding: 42px 0;
-    min-height: 500px;
+    min-height: 800px;
 
     .slide {
       display: none; // Hide slides by default
@@ -40,11 +41,12 @@ $dot-active-background: #717171;
 
       .article-title {
         font-size: 14px;
-        color: #747264;
+        color: white;
       }
 
       .article-p {
-        font-size: 14px;
+        font-size: 24px;
+        color: white;
       }
     }
 
@@ -57,14 +59,14 @@ $dot-active-background: #717171;
         height: $dot-size;
         width: $dot-size;
         margin: 0 5px;
-        background-color: $dot-background;
+        background-color: white;
         border-radius: 50%;
         display: inline-block;
         transition: background-color 0.6s ease;
 
         &:hover,
         &.active {
-          background-color: $dot-active-background;
+          background-color: rgb(212, 212, 212);
         }
       }
     }

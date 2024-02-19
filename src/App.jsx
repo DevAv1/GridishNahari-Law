@@ -24,8 +24,8 @@ export const App = () => {
             <SecondaryParallax/>
             <Services/>
             <ArticleSlideShow/>
-            <LocationMap/>
             <Contact/>
+            <LocationMap/>
             <Footer/>
         </div>
     )

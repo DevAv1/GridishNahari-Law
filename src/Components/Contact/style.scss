@@ -21,6 +21,7 @@ $width: 320px;
     align-self: center;
     justify-content: center;
     flex-wrap: wrap;
+    width: 90%;
     gap: 42px;
     padding-top: 42px;
 
@@ -170,7 +171,7 @@ $width: 320px;
     color: mix(black, $muted-color, 25%);
     border: none;
     padding: 10px 20px;
-    border-radius: 3px;
+    border-radius: 12px;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     text-decoration: none;
@@ -194,16 +195,17 @@ $width: 320px;
     }
 
     &.btn-submit {
-      background: $hl-color;
-      color: mix(white, $hl-color, 70%);
+      background: #EDB868;
+      color: white;
       font-size: 22px;
       @media screen and (max-width: 752px) {
         width: 100%;
       }
 
       &:hover {
-        background: darken($hl-color, 5%);
-        color: mix(white, $hl-color, 85%);
+        background: #be9863;
+        color: white;
+        cursor: pointer;
       }
     }
 
