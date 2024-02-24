@@ -18,10 +18,9 @@ $dot-active-background: #717171;
     margin: auto;
     overflow: hidden;
     padding: 42px 0;
-    min-height: 1000px;
 
     @media screen and (max-width: 752px) {
-      min-height: 500px;
+      min-height: auto;
     }
 
 
@@ -44,7 +43,7 @@ $dot-active-background: #717171;
 
     .article-content {
       padding: 20px;
-      min-height: 600px;
+      min-height: 478px;
 
       .article-title {
         display: flex;

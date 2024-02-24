@@ -1,5 +1,7 @@
 import './style.scss';
 import {useState} from "react";
+import City from '../../assets/icons/city.png';
+import Clock from '../../assets/icons/clock.png';
 
 export const Contact = () => {
     const [contactInfo, setContactInfo] = useState({
@@ -26,17 +28,20 @@ export const Contact = () => {
             <div className="section-header">יצירת קשר</div>
             <div className="contact-us-wrapper">
                 <div className="address-container">
-                    <span>אלברט אינשטיין 14, ראש העין</span>
+                    <div className="address">
+                        אלברט אינשטיין 14, ראש העין
+                        <img src={City}/>
+                    </div>
                     <div className="lawyer-phone">
-                        <span>ענבר גרידיש -</span>
+                        <span>ענבר גרידיש</span>
                         <a className="click-link">+972 52-466-4540</a>
                     </div>
                     <div className="lawyer-phone">
-                        <span>יפית נהרי -</span>
+                        <span>יפית נהרי</span>
                         <a className="click-link">+972 54-682-5784</a>
                     </div>
                     <a className="click-link">gn-lawfirm@gmail.com</a>
-                    <span>08:00 - 20:00</span>
+                    <span>08:00 - 20:00  <img src={Clock}/></span>
                 </div>
                 <form className="contact-form" onSubmit={handleSubmit}>
                     <div className="group">

@@ -1,4 +1,5 @@
 import './style.scss';
+import Logo from '../../assets/icons/logo-trans.png';
 
 export const Footer = () => {
     const handleClickScroll = (section) => {
@@ -25,7 +26,9 @@ export const Footer = () => {
                 <span onClick={() => handleClickScroll('contact-section')}>צור קשר</span>
             </nav>
             <div className="left-footer">
-
+                <div className="logo" onClick={() => handleClickScroll('home')}>
+                    <img src={Logo}/>
+                </div>
             </div>
         </div>
     )

@@ -88,14 +88,13 @@ const ArticleSlideShow = () => {
                     <div className="articles-wrapper">
                         {articles.map((article, index) => (
                             <div
-                            key={index}
-                            className={`slide fade ${index === currentSlide ? 'show' : ''}`}
+                                key={index}
+                                className={`slide fade ${index === currentSlide ? 'show' : ''}`}
                             >
-                                    <div className="article-content">
-                                        <p className="article-p">{article.content}</p>
-                                        <span className="article-title">{article.date}</span>
-                                    </div>
-                            
+                                <div className="article-content">
+                                    <p className="article-p">{article.content}</p>
+                                    <span className="article-title">{article.date}</span>
+                                </div>
                             </div>
                         ))}
                     </div>

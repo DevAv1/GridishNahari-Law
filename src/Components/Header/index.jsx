@@ -60,10 +60,10 @@ export const Header = ({onMenuOpen}) => {
                     <span onClick={() => handleClickScroll('contact-section')}>צור קשר</span>
                 </nav>
                 <div className="contact-tools">
-                    <img src={Location} alt='phone' />
-                    <img src={Email} alt='email' />
-                    <img src={Phone} alt='location' />
-                    <img src={Whatsapp} alt='whatsapp' />
+                    <img src={Location} alt='location' />
+                    <img src={Email} alt='email' onClick={() => handleClickScroll('contact-section')} />
+                    <img src={Phone} alt='phone' />
+                    <a href="https://wa.me/+972545980466" target="_blank"><img src={Whatsapp} alt='whatsapp' /></a>
                 </div>
             </div>
         </div>
