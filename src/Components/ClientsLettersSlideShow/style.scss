@@ -8,7 +8,6 @@ $dot-active-background: #717171;
   flex-direction: column;
   align-items: center;
   padding: 42px 12px;
-  background-color: rgba(181, 146, 31, 0.66);
 
   .slideshow-container {
     display: flex;
@@ -19,12 +18,19 @@ $dot-active-background: #717171;
     margin: auto;
     overflow: hidden;
     padding: 42px 0;
-    min-height: 800px;
+    min-height: 1000px;
+
+    @media screen and (max-width: 752px) {
+      min-height: 500px;
+    }
+
 
     .slide {
       display: none; // Hide slides by default
       opacity: 0; // Start with slides fully transparent
       transition: opacity $transition-speed ease-in-out; // Smooth transition for the fade effect
+
+
 
       &.show {
         display: block; // Show the current slide
@@ -38,35 +44,62 @@ $dot-active-background: #717171;
 
     .article-content {
       padding: 20px;
+      min-height: 600px;
 
       .article-title {
+        display: flex;
+        justify-content: flex-end;
         font-size: 14px;
-        color: white;
+        color: #717171;
       }
 
       .article-p {
-        font-size: 24px;
-        color: white;
+        font-size: 20px;
+        color: #717171;
       }
     }
-
+    .arrow-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .arrow {
+        @media screen and (max-width: 752px) {
+          img {
+            width: 22px;
+            &:hover {
+              cursor: pointer;
+              transform: unset;
+            }
+        
+          }
+        }
+        img {
+          width: 42px;
+          transition: 0.2s ease-in-out;
+          &:hover {
+            transform: scale(1.4);
+            cursor: pointer;
+          }
+        }
+      }
+    }
     .dot-container {
       text-align: center;
       padding: 20px 0;
-
+     
       .dot {
         cursor: pointer;
         height: $dot-size;
         width: $dot-size;
         margin: 0 5px;
-        background-color: white;
+        background-color: #AAB3C9;
         border-radius: 50%;
         display: inline-block;
         transition: background-color 0.6s ease;
 
         &:hover,
         &.active {
-          background-color: rgb(212, 212, 212);
+          background-color: #FD922A;
         }
       }
     }

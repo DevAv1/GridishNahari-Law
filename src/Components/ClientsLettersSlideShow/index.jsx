@@ -1,4 +1,6 @@
-import React, {useState, useEffect} from 'react';
+import {useState, useEffect} from 'react';
+import RightArrow from '../../assets/icons/right-arrow.png';
+import LeftArrow from '../../assets/icons/left-arrow.png';
 import './style.scss';
 
 const articles = [
@@ -51,37 +53,55 @@ const articles = [
 const ArticleSlideShow = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
 
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setCurrentSlide((prevSlide) =>
-                prevSlide === articles.length - 1 ? 0 : prevSlide + 1
-            );
-        }, 5000);
+    // useEffect(() => {
+    //     const timer = setTimeout(() => {
+    //         setCurrentSlide((prevSlide) =>
+    //             prevSlide === articles.length - 1 ? 0 : prevSlide + 1
+    //         );
+    //     }, 5000);
 
-        return () => clearTimeout(timer);
-    }, [currentSlide]);
+    //     return () => clearTimeout(timer);
+    // }, [currentSlide]);
 
     const goToSlide = (index) => {
         setCurrentSlide(index);
     };
 
+    const onArrowClick = (side) => {
+        if (side === 'right') {
+            setCurrentSlide((prevSlide) =>
+            prevSlide === 0 ? articles.length - 1 : prevSlide - 1
+        );
+        }
+        if (side === 'left') {
+            setCurrentSlide((prevSlide) =>
+                prevSlide === articles.length - 1 ? 0 : prevSlide + 1
+            );
+        }
+    }
+
     return (
         <div className="clients-letters-slideshow" id="clients-letters-slideshow">
-            <div className="section-header light-ver">לקוחות ממליצים</div>
+            <div className="section-header">לקוחות ממליצים</div>
 
             <div className="slideshow-container">
-                <div className="articles-wrapper">
-                    {articles.map((article, index) => (
-                        <div
+                    <div className="articles-wrapper">
+                        {articles.map((article, index) => (
+                            <div
                             key={index}
                             className={`slide fade ${index === currentSlide ? 'show' : ''}`}
-                        >
-                            <div className="article-content">
-                                <span className="article-title">{article.date}</span>
-                                <p className="article-p">{article.content}</p>
+                            >
+                                    <div className="article-content">
+                                        <p className="article-p">{article.content}</p>
+                                        <span className="article-title">{article.date}</span>
+                                    </div>
+                            
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
+                <div className="arrow-container">
+                    <div className="arrow a-right" onClick={() => onArrowClick('right')}><img src={RightArrow}/></div>
+                    <div className="arrow a-left" onClick={() => onArrowClick('left')}><img src={LeftArrow}/></div>
                 </div>
                 <div className="dot-container">
                     {articles.map((_, index) => (

@@ -21,7 +21,6 @@ export const App = () => {
             <Header onMenuOpen={() => setIsMenu(!isMenu)}/>
             <Parallax/>
             <About/>
-            <SecondaryParallax/>
             <Services/>
             <ArticleSlideShow/>
             <Contact/>
