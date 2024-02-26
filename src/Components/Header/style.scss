@@ -24,6 +24,58 @@
     justify-content: space-between;
     width: 1218px;
 
+    .contact-picker-tool {
+      .lawyer-phone {
+        display: flex;
+        gap: 4px;
+        align-items: center;
+        padding: 4px 0;
+        font-size: 12px;
+        a {
+          text-decoration: none;
+          color: #EDB868;
+          text-wrap: nowrap;
+        }
+        span {
+          min-width: 70px;
+          position: relative;
+          padding: 0 4px;
+
+          &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 1px;
+            background-color: #747264;
+          }
+        }
+      }
+      position: absolute;
+      left: 0;
+      top: 80px;
+      width: 200px;
+      height: 0;
+      background: rgba(255, 255, 255, 0.93);
+      transition: 0.2s ease-in-out;
+      border-radius: 0 0 12px 12px;
+      opacity: 0;
+      
+      &.tool-show {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 80px;
+        opacity: 1;
+      }
+      &.dynamic {
+        top: 70px;
+      }
+
+   
+    }
     .contact-tools {
       display: flex;
       align-self: center;
@@ -44,7 +96,7 @@
 
         &:hover {
           cursor: pointer;
-          transform: scale(1.4) translateY(-5px);
+          transform: scale(1.2) translateY(-2px);
         }
       }
     }

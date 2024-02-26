@@ -76,9 +76,15 @@ export const Services = () => {
                 <div className="service-descriptions-wrapper">
                     <div className={`service-description ${servicesIndex === 1 && 'show'}`}>
                         <ul>
-                            <li><img src={ListBullet} alt="service-list"/>  תביעת רשלנות</li>
-                            <li><img src={ListBullet} alt="service-list"/>  תביעה בגין תאונת דרכים</li>
-                            <li><img src={ListBullet} alt="service-list"/>  תביעה בגין תאנת עבודה</li>
+                            <li><img src={ListBullet} alt="service-list"/>  גירושין</li>
+                            <li><img src={ListBullet} alt="service-list"/>  מזונות</li>
+                            <li><img src={ListBullet} alt="service-list"/>  משמורת</li>
+                            <li><img src={ListBullet} alt="service-list"/>  כתובה</li>
+                            <li><img src={ListBullet} alt="service-list"/>  הסכם ממון</li>
+                            <li><img src={ListBullet} alt="service-list"/>  הסכם שלום בית</li>
+                            <li><img src={ListBullet} alt="service-list"/>  הגירה</li>
+                            <li><img src={ListBullet} alt="service-list"/>  אמנת האג</li>
+
                         </ul>
                         <span className="read-more" onClick={() => onReadMoreClick('FAMILY')}>קרא עוד</span>
                     </div>
@@ -105,14 +111,9 @@ export const Services = () => {
                     </div>
                     <div className={`service-description ${servicesIndex === 4 && 'show'}`}>
                         <ul>
-                            <li><img src={ListBullet} alt="service-list"/>  גירושין</li>
-                            <li><img src={ListBullet} alt="service-list"/>  מזונות</li>
-                            <li><img src={ListBullet} alt="service-list"/>  משמורת</li>
-                            <li><img src={ListBullet} alt="service-list"/>  כתובה</li>
-                            <li><img src={ListBullet} alt="service-list"/>  הסכם ממון</li>
-                            <li><img src={ListBullet} alt="service-list"/>  הסכם שלום בית</li>
-                            <li><img src={ListBullet} alt="service-list"/>  הגירה</li>
-                            <li><img src={ListBullet} alt="service-list"/>  אמנת האג</li>
+                            <li><img src={ListBullet} alt="service-list"/>  תביעת רשלנות</li>
+                            <li><img src={ListBullet} alt="service-list"/>  תביעה בגין תאונת דרכים</li>
+                            <li><img src={ListBullet} alt="service-list"/>  תביעה בגין תאנת עבודה</li>
                         </ul>
                         <span className="read-more" onClick={() => onReadMoreClick('DAMAGE')}>קרא עוד</span>
                     </div>

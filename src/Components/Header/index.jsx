@@ -8,14 +8,17 @@ import Logo from '../../assets/icons/logo-trans.png';
 import Whatsapp from '../../assets/icons/whatsapp.png';
 
 import {HamburgerMenu} from "./HaburgerMenu.jsx";
+import { ContactPickerTool } from './ContactPickerTool.jsx';
 
 export const Header = ({onMenuOpen}) => {
     const [scrolled, setScrolled] = useState(false);
+    const [isContactToolShow, setIsContactToolShow] = useState(false);
+    const [isPhone, setIsPhone] = useState(true);
     const [hamburgerMenu, setHamburgerMenu] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
-            const isScrolled = window.scrollY > 80;
+            const isScrolled = window.scrollY > 79;
             if (isScrolled !== scrolled) {
                 setScrolled(isScrolled);
             }
@@ -40,6 +43,10 @@ export const Header = ({onMenuOpen}) => {
         }
     };
 
+    const handleContactClick = (type) => {
+        setIsPhone(type === 'phone');
+        setIsContactToolShow(p => !p);
+    }
     const onClickCallback = () => {
         setHamburgerMenu((prevState) => (!prevState));
         onMenuOpen();
@@ -59,11 +66,17 @@ export const Header = ({onMenuOpen}) => {
                     <span onClick={() => handleClickScroll('clients-letters-slideshow')}>לקוחות ממליצים</span>
                     <span onClick={() => handleClickScroll('contact-section')}>צור קשר</span>
                 </nav>
+                <ContactPickerTool
+                    isDynamic={scrolled}
+                    show={isContactToolShow}
+                    isPhone={isPhone}
+                    onClose={() => setIsContactToolShow(false)}
+                />
                 <div className="contact-tools">
                     <img src={Location} alt='location' />
                     <img src={Email} alt='email' onClick={() => handleClickScroll('contact-section')} />
-                    <img src={Phone} alt='phone' />
-                    <a href="https://wa.me/+972545980466" target="_blank"><img src={Whatsapp} alt='whatsapp' /></a>
+                    <img src={Phone} alt='phone' onClick={() => handleContactClick('phone')}/>
+                    <img src={Whatsapp} alt='whatsapp' onClick={() => handleContactClick('whatsapp')} />
                 </div>
             </div>
         </div>
