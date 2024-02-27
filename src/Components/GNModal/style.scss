@@ -25,7 +25,7 @@
     background-color: white;
     padding: 25px;
     border-radius: 8px;
-    width: 99%;
+    width: auto;
     height: 90vh;
     max-height: 90vh;
     overflow-y: scroll;
@@ -33,9 +33,46 @@
     position: relative;
     transform: scale(0.9);
     animation: scaleIn 0.3s forwards;
-    h3 {
-      color: #FD922A;
+
+    * {
+      direction: rtl;
     }
+
+    h1 {
+      color: #EDB868;
+    }
+
+    p {
+      max-width: 600px;
+    }
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    li {
+        background-color: #fff;
+        margin: 10px 0;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        max-width: 600px;
+    }
+    a {
+        color: #007bff;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    .simulators {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    .simulator-link {
+        margin-bottom: 10px;
+    }
+   
     @media screen and (max-width: 752px) {
       height: 100%;
       width: 100%;
@@ -82,7 +119,7 @@
   /* Responsive adjustments */
   @media (max-width: 768px) {
     .modal-content {
-      width: 80%;
+      width: 99%;
     }
   }
 

@@ -15,19 +15,21 @@ export const Footer = () => {
     };
     return (
         <div className="footer">
-            <div className="right-footer">
-                <span className="office-name">גרידיש נהרי משרד עורכי דין</span>
-            </div>
-            <nav className="nav-items">
-                <span onClick={() => handleClickScroll('home')}>בית</span>
-                <span onClick={() => handleClickScroll('about-section')}>אודות</span>
-                <span onClick={() => handleClickScroll('services-section')}>תחומי עיסוק</span>
-                <span onClick={() => handleClickScroll('clients-letters-slideshow')}>לקוחות ממליצים</span>
-                <span onClick={() => handleClickScroll('contact-section')}>צור קשר</span>
-            </nav>
-            <div className="left-footer">
-                <div className="logo" onClick={() => handleClickScroll('home')}>
-                    <img src={Logo}/>
+            <div className="footer-content-wrapper">
+                <div className="right-footer">
+                    <span className="office-name">גרידיש נהרי משרד עורכי דין</span>
+                </div>
+                <nav className="nav-items">
+                    <span onClick={() => handleClickScroll('home')}>בית</span>
+                    <span onClick={() => handleClickScroll('about-section')}>אודות</span>
+                    <span onClick={() => handleClickScroll('services-section')}>תחומי עיסוק</span>
+                    <span onClick={() => handleClickScroll('clients-letters-slideshow')}>לקוחות ממליצים</span>
+                    <span onClick={() => handleClickScroll('contact-section')}>צור קשר</span>
+                </nav>
+                <div className="left-footer">
+                    <div className="logo" onClick={() => handleClickScroll('home')}>
+                        <img src={Logo}/>
+                    </div>
                 </div>
             </div>
         </div>

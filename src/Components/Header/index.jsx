@@ -65,18 +65,19 @@ export const Header = ({onMenuOpen}) => {
                     <span onClick={() => handleClickScroll('services-section')}>תחומי עיסוק</span>
                     <span onClick={() => handleClickScroll('clients-letters-slideshow')}>לקוחות ממליצים</span>
                     <span onClick={() => handleClickScroll('contact-section')}>צור קשר</span>
+          
                 </nav>
-                <ContactPickerTool
-                    isDynamic={scrolled}
-                    show={isContactToolShow}
-                    isPhone={isPhone}
-                    onClose={() => setIsContactToolShow(false)}
-                />
                 <div className="contact-tools">
                     <img src={Location} alt='location' />
                     <img src={Email} alt='email' onClick={() => handleClickScroll('contact-section')} />
                     <img src={Phone} alt='phone' onClick={() => handleContactClick('phone')}/>
                     <img src={Whatsapp} alt='whatsapp' onClick={() => handleContactClick('whatsapp')} />
+                    <ContactPickerTool
+                        isDynamic={scrolled}
+                        show={isContactToolShow}
+                        isPhone={isPhone}
+                        onClose={() => setIsContactToolShow(false)}
+                    />
                 </div>
             </div>
         </div>

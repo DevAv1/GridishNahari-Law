@@ -25,6 +25,18 @@
     width: 1218px;
 
     .contact-picker-tool {
+      position: absolute;
+      left: 0;
+      top: 52px;
+      width: 200px;
+      height: 0;
+      background: rgba(255, 255, 255, 0.93);
+      transition: 0.2s ease-in-out;
+      border-radius: 0 0 12px 12px;
+      opacity: 0;
+      @media screen and (max-width: 800px) {
+        top: 42px;
+      }
       .lawyer-phone {
         display: flex;
         gap: 4px;
@@ -52,15 +64,6 @@
           }
         }
       }
-      position: absolute;
-      left: 0;
-      top: 80px;
-      width: 200px;
-      height: 0;
-      background: rgba(255, 255, 255, 0.93);
-      transition: 0.2s ease-in-out;
-      border-radius: 0 0 12px 12px;
-      opacity: 0;
       
       &.tool-show {
         display: flex;
@@ -71,12 +74,13 @@
         opacity: 1;
       }
       &.dynamic {
-        top: 70px;
+        top: 46px;
       }
 
    
     }
     .contact-tools {
+      position: relative;
       display: flex;
       align-self: center;
       gap: 12px;
@@ -84,7 +88,9 @@
       background: rgba(243, 243, 243, 0.2);
       border-radius: 12px;
       @media screen and (max-width: 752px) {
-        display: none;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
       }
 
       img {
@@ -126,7 +132,7 @@
     gap: 44px;
     max-width: 1200px;
     height: 100%;
-    @media screen and (max-width: 752px) {
+    @media screen and (max-width: 800px) {
       display: none;
     }
 
