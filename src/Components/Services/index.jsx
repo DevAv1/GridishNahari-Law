@@ -1,26 +1,17 @@
 import {useRef, useState} from 'react';
 import { useInView } from "framer-motion";
 import './style.scss';
-import Family from '../../assets/icons/studying-desk-svgrepo-com.svg';
-import Damage from '../../assets/icons/classic-column-svgrepo-com.svg';
-import Ground from '../../assets/icons/legal-hammer-svgrepo-com.svg';
-import Power from '../../assets/icons/law-scales-svgrepo-com.svg';
+import Family from '../../assets/icons/family.png';
+import Damage from '../../assets/icons/damage.png';
+import Ground from '../../assets/icons/ground.png';
+import Power from '../../assets/icons/power.png';
 import ListBullet from '../../assets/icons/categories.png';
 import { motion } from "framer-motion";
-import { GNModal } from '../GNModal';
-import { ServiceTypeInfoDictionary } from './utils';
 
 export const Services = () => {
     const [servicesIndex, setServicesIndex] = useState(1);
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const [serviceType, setServiceType] = useState();
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
-
-    const onReadMoreClick = (serviceType = 'Family') => {
-        setIsModalOpen(true);
-        setServiceType(serviceType)
-    }
 
     return (
         <div className="services" id="services-section">
@@ -33,9 +24,6 @@ export const Services = () => {
                         transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
                     }}
                 >
-                    <GNModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-                        {ServiceTypeInfoDictionary?.[serviceType]}
-                    </GNModal>
                     <motion.div
                         className="services-nav"
                         whileHover={{ scale: 1.1 }}
@@ -86,7 +74,7 @@ export const Services = () => {
                             <li><img src={ListBullet} alt="service-list"/>  אמנת האג</li>
 
                         </ul>
-                        <span className="read-more" onClick={() => onReadMoreClick('FAMILY')}>קרא עוד</span>
+                        {/* <span className="read-more" onClick={() => onReadMoreClick('FAMILY')}>קרא עוד</span> */}
                     </div>
                     <div className={`service-description ${servicesIndex === 2 && 'show'}`}>
                         <ul>
@@ -98,7 +86,7 @@ export const Services = () => {
                             <li><img src={ListBullet} alt="service-list"/>  מיסוי מקרקעין</li>
                             <li><img src={ListBullet} alt="service-list"/>  פינוי בינוי/תמ"א</li>
                         </ul>
-                        <span className="read-more" onClick={() => onReadMoreClick('GROUND')}>קרא עוד</span>
+                        {/* <span className="read-more" onClick={() => onReadMoreClick('GROUND')}>קרא עוד</span> */}
                     </div>
                     <div className={`service-description ${servicesIndex === 3 && 'show'}`}>
                         <ul>
@@ -107,7 +95,7 @@ export const Services = () => {
                             <li><img src={ListBullet} alt="service-list"/>  מינוי מנהלי</li>
                             <li><img src={ListBullet} alt="service-list"/>  בני זוג ויחידים</li>
                         </ul>
-                        <span className="read-more" onClick={() => onReadMoreClick('POWER')}>קרא עוד</span>
+                        {/* <span className="read-more" onClick={() => onReadMoreClick('POWER')}>קרא עוד</span> */}
                     </div>
                     <div className={`service-description ${servicesIndex === 4 && 'show'}`}>
                         <ul>
@@ -115,7 +103,7 @@ export const Services = () => {
                             <li><img src={ListBullet} alt="service-list"/>  תביעה בגין תאונת דרכים</li>
                             <li><img src={ListBullet} alt="service-list"/>  תביעה בגין תאנת עבודה</li>
                         </ul>
-                        <span className="read-more" onClick={() => onReadMoreClick('DAMAGE')}>קרא עוד</span>
+                        {/* <span className="read-more" onClick={() => onReadMoreClick('DAMAGE')}>קרא עוד</span> */}
                     </div>
                 </div>
             </div>

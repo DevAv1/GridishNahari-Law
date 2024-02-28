@@ -3,6 +3,7 @@
   min-height: 100vh;
   overflow: hidden;
 
+
   &.app-no-scroll {
     overflow: hidden;
   }
@@ -12,7 +13,7 @@
     left: 0;
     right: 0;
     z-index: 999999;
-    height: 10px;
+    height: 7px;
     background: #EDB868;
     transform-origin: 0%;
   }

@@ -1,15 +1,20 @@
 import './style.scss';
-import {useState} from "react";
+import {useState, useRef} from "react";
 import City from '../../assets/icons/city.png';
 import Clock from '../../assets/icons/clock.png';
+import emailjs from '@emailjs/browser';
 
 export const Contact = () => {
     const [contactInfo, setContactInfo] = useState({
-        fullName: '',
-        email: '',
+        from_name: '',
+        from_mail: '',
         message: '',
     });
-    const [formMessage, setFormMessage] = useState('');
+    const [formMessage, setFormMessage] = useState({
+        type: '',
+        message: ''
+    });
+    const form = useRef();
 
     const validateEmail = (email) => {
         return email.match(
@@ -20,7 +25,7 @@ export const Contact = () => {
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        if (name === 'email' && contactInfo.email.length > 0) setFormMessage('');
+        if (name === 'email' && contactInfo.from_mail.length > 0) setFormMessage({});
         setContactInfo(prevState => ({
             ...prevState,
             [name]: value
@@ -29,12 +34,45 @@ export const Contact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (!validateEmail(contactInfo.email)) {
-            setFormMessage('כתובת מייל לא תקינה!');
+        const TEMPLATE_KEY = import.meta.env.VITE_EMAIL_JS_TEMPLATE_KEY;
+        const SERVICE_KEY = import.meta.env.VITE_EMAIL_JS_SERVICE_KEY;
+        const PUBLIC_KEY = import.meta.env.VITE_EMAIL_JS_PUBLIC_KEY;
+
+        if (!validateEmail(contactInfo.from_mail)) {
+            setFormMessage({
+                type: 'error',
+                message: 'כתובת מייל לא תקינה!'
+            });
         } else {
-            setFormMessage('');
+            setFormMessage({});
+            emailjs
+        .sendForm(SERVICE_KEY, TEMPLATE_KEY, form.current, {
+            publicKey: PUBLIC_KEY,
+        })
+        .then(() => {
+                console.log('SUCCESS!');
+                setContactInfo({
+                    from_name: '',
+                    from_mail: '',
+                    message: '' 
+                });
+                setFormMessage({
+                    type: 'success',
+                    message: 'הודעה נשלחה בהצלחה, נחזור אליכם בהקדם!'
+                })
+                setTimeout(() => {
+                    setFormMessage({ type: '', message: '' });
+                }, 5000)
+            }, (error) => {
+                    console.log('FAILED...', error.text);
+                    setFormMessage({
+                        type: 'error',
+                        message: 'התרחשה בעיה, נסה שנית מאוחר יותר.'
+                    })
+              
+                }
+        );
         }
-        console.log(contactInfo);
     };
     return (
 
@@ -54,26 +92,28 @@ export const Contact = () => {
                         <span>יפית נהרי</span>
                         <a className="click-link" href="tel:+972546825784">+972 54-682-5784</a>
                     </div>
-                    <a className="click-link">gn-lawfirm@gmail.com</a>
+                    <a className="click-link">inbarg@gn-lawfirm.co.il</a>
+                    <a className="click-link">yafiti@gn-lawfirm.co.il</a>
+                    <a className="click-link">office@gn-lawfirm.co.il</a>
                     <div className="activity-time">
                         <img src={Clock}/>
                         <span>08:00 - 20:00</span>
                     </div>
                 </div>
-                <form className="contact-form" onSubmit={handleSubmit}>
+                <form className="contact-form" onSubmit={handleSubmit} ref={form} >
                     <div className="group">
-                        <input onChange={(e) => handleChange(e)} name="fullName" type="text" required="required"/><span className="highlight"></span><span className="bar"></span>
+                        <input onChange={(e) => handleChange(e)} value={contactInfo.from_name} name="from_name" type="text" required="required"/><span className="highlight"></span><span className="bar"></span>
                         <label>שם מלא</label>
                     </div>
                     <div className="group">
-                        <input onChange={(e) => handleChange(e)} type="text" name="email" required="required"/><span className="highlight"></span><span className="bar"></span>
+                        <input onChange={(e) => handleChange(e)} value={contactInfo.from_mail} type="text" name="from_mail" required="required"/><span className="highlight"></span><span className="bar"></span>
                         <label>אימייל</label>
                     </div>
                     <div className="group message-area">
-                        <textarea onChange={(e) => handleChange(e)} name="message" type="textarea" rows="5" required="required"></textarea><span className="highlight"></span><span className="bar"></span>
+                        <textarea onChange={(e) => handleChange(e)} value={contactInfo.message} name="message" type="textarea" rows="5" required="required"></textarea><span className="highlight"></span><span className="bar"></span>
                         <label>הודעה</label>
                     </div>
-                    <span className="form-error-message">{formMessage}</span>
+                    <span className={`form-error-message ${contactInfo.type === 'error' ? 'error' : 'success'}`}>{formMessage.message}</span>
                     <div className="btn-box">
                         <button className="btn btn-submit" type="submit">שלח</button>
                     </div>

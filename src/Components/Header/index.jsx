@@ -4,7 +4,7 @@ import {Hamburger} from "./Hamburger.jsx";
 import Phone from '../../assets/icons/phone.svg';
 import Email from '../../assets/icons/email.svg';
 import Location from '../../assets/icons/location.svg';
-import Logo from '../../assets/icons/logo-trans.png';
+import Logo from '../../assets/icons/GN-logo-primary.svg';
 import Whatsapp from '../../assets/icons/whatsapp.png';
 
 import {HamburgerMenu} from "./HaburgerMenu.jsx";
@@ -15,6 +15,7 @@ export const Header = ({onMenuOpen}) => {
     const [isContactToolShow, setIsContactToolShow] = useState(false);
     const [isPhone, setIsPhone] = useState(true);
     const [hamburgerMenu, setHamburgerMenu] = useState(false);
+    const [isLocationInfo, setIsLocationInfo] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -47,6 +48,7 @@ export const Header = ({onMenuOpen}) => {
         setIsPhone(type === 'phone');
         setIsContactToolShow(p => !p);
     }
+
     const onClickCallback = () => {
         setHamburgerMenu((prevState) => (!prevState));
         onMenuOpen();
@@ -68,7 +70,7 @@ export const Header = ({onMenuOpen}) => {
           
                 </nav>
                 <div className="contact-tools">
-                    <img src={Location} alt='location' />
+                    <img src={Location} alt='location' onClick={() => handleClickScroll('location-map')}/>
                     <img src={Email} alt='email' onClick={() => handleClickScroll('contact-section')} />
                     <img src={Phone} alt='phone' onClick={() => handleContactClick('phone')}/>
                     <img src={Whatsapp} alt='whatsapp' onClick={() => handleContactClick('whatsapp')} />

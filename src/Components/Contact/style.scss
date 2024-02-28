@@ -27,7 +27,12 @@ $width: 320px;
 
     .contact-form {
       .form-error-message {
-        color: rgb(247, 97, 97);
+        &.error {
+          color: rgb(247, 97, 97);
+        }
+        &.success {
+          color: #EDB868;
+        }
       }
     }
 

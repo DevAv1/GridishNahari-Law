@@ -1,5 +1,5 @@
 import './style.scss';
-import Logo from '../../assets/icons/logo-trans.png';
+import Logo from '../../assets/icons/GN-logo-primary.svg';
 
 export const Footer = () => {
     const handleClickScroll = (section) => {
