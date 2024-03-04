@@ -1,5 +1,7 @@
 import { useRef } from 'react';
-import FamilyBg from '../../assets/backgrounds/ground-article-bg.jpg';
+import GroundBg from '../../assets/backgrounds/ground-article-bg.jpg';
+import PowerBg from '../../assets/backgrounds/power-article-bg.jpg';
+import FamilyBg from '../../assets/backgrounds/family-article-bg.jpg';
 import DamageBg from '../../assets/backgrounds/damage-article-bg.jpg';
 import './style.scss';
 import { motion, useInView } from 'framer-motion';
@@ -10,7 +12,7 @@ export const ServicesArticles = () => {
     const groundRef = useRef(null);
     const isGroundInView = useInView(groundRef);
     const powerRef = useRef(null);
-    const isPowerRef = useInView(powerRef);
+    const isPowerInView = useInView(powerRef);
     const damageRef = useRef(null);
     const isDamageInView = useInView(damageRef);
 
@@ -42,7 +44,7 @@ export const ServicesArticles = () => {
             <div className="article">
                 <div className="service-image-bg">
                     <motion.img
-                        src={DamageBg}
+                        src={GroundBg}
                         initial={{ scale: 1 }}
                         animate={{ scale: isGroundInView ? 1.04 : 1 }} // Scale up when in view
                         transition={{ duration: 0.2 }} // Adjust duration as needed
@@ -103,9 +105,9 @@ export const ServicesArticles = () => {
             <div className="article">
                 <div className="service-image-bg">
                     <motion.img
-                        src={DamageBg}
+                        src={PowerBg}
                         initial={{ scale: 1 }}
-                        animate={{ scale: isPowerRef ? 1.04 : 1 }} // Scale up when in view
+                        animate={{ scale: isPowerInView ? 1.04 : 1 }} // Scale up when in view
                         transition={{ duration: 0.2 }} // Adjust duration as needed
                     />
                 </div>

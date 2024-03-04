@@ -91,7 +91,7 @@ export const Services = () => {
                     <div className={`service-description ${servicesIndex === 3 && 'show'}`}>
                         <ul>
                             <li><img src={ListBullet} alt="service-list"/>  מינוי ממוני</li>
-                            <li><img src={ListBullet} alt="service-list"/>  מינוי רפואה</li>
+                            <li><img src={ListBullet} alt="service-list"/>  מינוי רפואי</li>
                             <li><img src={ListBullet} alt="service-list"/>  מינוי מנהלי</li>
                             <li><img src={ListBullet} alt="service-list"/>  בני זוג ויחידים</li>
                         </ul>
@@ -100,8 +100,8 @@ export const Services = () => {
                     <div className={`service-description ${servicesIndex === 4 && 'show'}`}>
                         <ul>
                             <li><img src={ListBullet} alt="service-list"/>  תביעת רשלנות</li>
-                            <li><img src={ListBullet} alt="service-list"/>  תביעה בגין תאונת דרכים</li>
-                            <li><img src={ListBullet} alt="service-list"/>  תביעה בגין תאנת עבודה</li>
+                            <li><img src={ListBullet} alt="service-list"/>  תביעה בגין תאונות דרכים</li>
+                            <li><img src={ListBullet} alt="service-list"/>  תביעה בגין תאונות עבודה</li>
                         </ul>
                         {/* <span className="read-more" onClick={() => onReadMoreClick('DAMAGE')}>קרא עוד</span> */}
                     </div>

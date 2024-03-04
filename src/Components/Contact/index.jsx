@@ -92,8 +92,6 @@ export const Contact = () => {
                         <span>יפית נהרי</span>
                         <a className="click-link" href="tel:+972546825784">+972 54-682-5784</a>
                     </div>
-                    <a className="click-link">inbarg@gn-lawfirm.co.il</a>
-                    <a className="click-link">yafiti@gn-lawfirm.co.il</a>
                     <a className="click-link">office@gn-lawfirm.co.il</a>
                     <div className="activity-time">
                         <img src={Clock}/>

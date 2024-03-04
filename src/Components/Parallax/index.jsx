@@ -24,7 +24,7 @@ export const Parallax = () => {
                 <span className="title-main">גרידיש נהרי</span>
                 <span className="title-secondary">משרד עורכי דין</span>
                 <div className="title-services">
-                    נזיקין, דיני משפחה, ייפוי כח מתמשך, מקרקעין.
+                    דיני משפחה, מקרקעין, יפוי כח מתמשך ונזיקין.
                 </div>
             </div>
         </div>
