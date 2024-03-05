@@ -12,7 +12,7 @@ export const HamburgerMenu = ({isShow, onMenuSelect}) => {
         onMenuSelect?.();
     };
     return (
-        <div className={`hamburger-menu ${isShow && 'hamburger-menu-active'}`}>
+        <div className={`hamburger-menu ${isShow && 'hamburger-menu-active'} prevent-select`}>
             <ul className="hamburger-menu-items-wrapper">
                 <span onClick={() => handleClickScroll('home')}>בית</span>
                 <span onClick={() => handleClickScroll('about-section')}>אודות</span>

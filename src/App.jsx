@@ -1,3 +1,4 @@
+import {useEffect} from 'react';
 import './App.scss'
 import {Header} from "./Components/Header";
 import {Parallax} from "./Components/Parallax";
@@ -10,11 +11,17 @@ import { ServicesArticles } from './Components/ServicesArticles/index.jsx';
 import ArticleSlideShow from "./Components/ClientsLettersSlideShow/index.jsx";
 import {useState} from "react";
 import { motion, useScroll } from "framer-motion"
+import ReactGA from 'react-ga';
 
 export const App = () => {
     const [isMenu, setIsMenu] = useState(false);
     const { scrollYProgress } = useScroll();
+    const GA_TRACKER_KEY = import.meta.env.VITE_GA_KEY;
+    ReactGA.initialize(GA_TRACKER_KEY);
 
+    useEffect(() => {
+        ReactGA.pageview(window.location.pathname);
+    }, []);
     return (
         <div className={`app ${isMenu && 'app-no-scroll'}`} id="home">
             <motion.div className="progress-bar" style={{ scaleX: scrollYProgress }}/>

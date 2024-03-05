@@ -72,7 +72,14 @@ export const Services = () => {
                             <li><img src={ListBullet} alt="service-list"/>  הסכם שלום בית</li>
                             <li><img src={ListBullet} alt="service-list"/>  הגירה</li>
                             <li><img src={ListBullet} alt="service-list"/>  אמנת האג</li>
-
+                            <li><img src={ListBullet} alt="service-list"/>  חוק הנוער</li>
+                            <li><img src={ListBullet} alt="service-list"/>  צו הרחקה / הטרדה מאיימת</li>
+                            <li><img src={ListBullet} alt="service-list"/>  ייצוג בבית הדין ובבתי המשפט השונים</li>
+                            <li><img src={ListBullet} alt="service-list"/>  התרת נישואין</li>
+                            <li><img src={ListBullet} alt="service-list"/>  דוברת עברית ואנגלית</li>
+                            <li><img src={ListBullet} alt="service-list"/>  צוואות</li>
+                            <li><img src={ListBullet} alt="service-list"/>  ירושות</li>
+                            <li><img src={ListBullet} alt="service-list"/>  התנגדות לצוואה</li>
                         </ul>
                         {/* <span className="read-more" onClick={() => onReadMoreClick('FAMILY')}>קרא עוד</span> */}
                     </div>

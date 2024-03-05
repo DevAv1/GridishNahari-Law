@@ -30,6 +30,12 @@ html, body {
   box-sizing: border-box;
 }
 
+.prevent-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
 .section-header {
   position: relative;
   font-size: 32px;

@@ -7,6 +7,7 @@ import emailjs from '@emailjs/browser';
 export const Contact = () => {
     const [contactInfo, setContactInfo] = useState({
         from_name: '',
+        from_phone: '',
         from_mail: '',
         message: '',
     });
@@ -53,6 +54,7 @@ export const Contact = () => {
                 console.log('SUCCESS!');
                 setContactInfo({
                     from_name: '',
+                    from_phone: '',
                     from_mail: '',
                     message: '' 
                 });
@@ -102,6 +104,10 @@ export const Contact = () => {
                     <div className="group">
                         <input onChange={(e) => handleChange(e)} value={contactInfo.from_name} name="from_name" type="text" required="required"/><span className="highlight"></span><span className="bar"></span>
                         <label>שם מלא</label>
+                    </div>
+                    <div className="group">
+                        <input onChange={(e) => handleChange(e)} value={contactInfo.from_phone} name="from_phone" type="text" required="required"/><span className="highlight"></span><span className="bar"></span>
+                        <label>מס' טלפון</label>
                     </div>
                     <div className="group">
                         <input onChange={(e) => handleChange(e)} value={contactInfo.from_mail} type="text" name="from_mail" required="required"/><span className="highlight"></span><span className="bar"></span>

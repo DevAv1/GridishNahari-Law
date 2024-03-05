@@ -15,7 +15,6 @@ export const Header = ({onMenuOpen}) => {
     const [isContactToolShow, setIsContactToolShow] = useState(false);
     const [isPhone, setIsPhone] = useState(true);
     const [hamburgerMenu, setHamburgerMenu] = useState(false);
-    const [isLocationInfo, setIsLocationInfo] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -54,7 +53,7 @@ export const Header = ({onMenuOpen}) => {
         onMenuOpen();
     }
     return (
-        <div className={`header ${scrolled && 'dynamic-header'}`}>
+        <div className={`header ${scrolled && 'dynamic-header prevent-select'}`}>
             <div className="header-content">
                 <Hamburger isShow={hamburgerMenu} onClickCallback={onClickCallback} scrolled={scrolled}/>
                 <HamburgerMenu isShow={hamburgerMenu} onMenuSelect={() => setHamburgerMenu(false)}/>
