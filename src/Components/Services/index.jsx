@@ -80,6 +80,7 @@ export const Services = () => {
                             <li><img src={ListBullet} alt="service-list"/>  צוואות</li>
                             <li><img src={ListBullet} alt="service-list"/>  ירושות</li>
                             <li><img src={ListBullet} alt="service-list"/>  התנגדות לצוואה</li>
+                            <li><img src={ListBullet} alt="service-list"/>  ידועים בציבור</li>
                         </ul>
                         {/* <span className="read-more" onClick={() => onReadMoreClick('FAMILY')}>קרא עוד</span> */}
                     </div>

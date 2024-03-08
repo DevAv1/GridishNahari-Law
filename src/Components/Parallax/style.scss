@@ -9,10 +9,12 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url('../../assets/backgrounds/bina-3-back.jpg');
+    background-image: url('../../assets/backgrounds/legal-wallpaper-handshake.jpg');
     aspect-ratio: auto;
-
+    
     @media screen and (max-width: 752px) {
+      height: 100vh;
+      object-fit: cover;
       background-attachment: inherit;
     }
 

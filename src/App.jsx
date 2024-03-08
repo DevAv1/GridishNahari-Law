@@ -17,11 +17,21 @@ export const App = () => {
     const [isMenu, setIsMenu] = useState(false);
     const { scrollYProgress } = useScroll();
     const GA_TRACKER_KEY = import.meta.env.VITE_GA_KEY;
-    ReactGA.initialize(GA_TRACKER_KEY);
 
-    useEffect(() => {
+    const initGA = () => {
+        ReactGA.initialize(GA_TRACKER_KEY);
+    };
+
+    const logPageView = () => {
+        ReactGA.set({ page: window.location.pathname });
         ReactGA.pageview(window.location.pathname);
+    };
+  
+    useEffect(() => {
+        initGA();
+        logPageView();
     }, []);
+
     return (
         <div className={`app ${isMenu && 'app-no-scroll'}`} id="home">
             <motion.div className="progress-bar" style={{ scaleX: scrollYProgress }}/>
