@@ -6,9 +6,9 @@ import Email from '../../assets/icons/email.svg';
 import Location from '../../assets/icons/location.svg';
 import Logo from '../../assets/icons/GN-logo-primary.svg';
 import Whatsapp from '../../assets/icons/whatsapp.png';
-
 import {HamburgerMenu} from "./HaburgerMenu.jsx";
 import { ContactPickerTool } from './ContactPickerTool.jsx';
+import { FastContact } from '../FastContact/index.jsx';
 
 export const Header = ({onMenuOpen}) => {
     const [scrolled, setScrolled] = useState(false);
@@ -66,7 +66,6 @@ export const Header = ({onMenuOpen}) => {
                     <span onClick={() => handleClickScroll('services-section')}>תחומי עיסוק</span>
                     <span onClick={() => handleClickScroll('clients-letters-slideshow')}>לקוחות ממליצים</span>
                     <span onClick={() => handleClickScroll('contact-section')}>צור קשר</span>
-          
                 </nav>
                 <div className="contact-tools">
                     <img src={Location} alt='location' onClick={() => handleClickScroll('location-map')}/>
@@ -80,6 +79,7 @@ export const Header = ({onMenuOpen}) => {
                         onClose={() => setIsContactToolShow(false)}
                     />
                 </div>
+                <FastContact/>
             </div>
         </div>
     )

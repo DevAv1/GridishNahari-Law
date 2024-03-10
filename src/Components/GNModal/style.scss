@@ -22,12 +22,15 @@
   }
   
   .modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: white;
     padding: 25px;
     border-radius: 8px;
     width: auto;
-    height: 90vh;
-    max-height: 90vh;
+    min-width: 320px;
     overflow-y: scroll;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: relative;
@@ -119,7 +122,6 @@
   /* Responsive adjustments */
   @media (max-width: 768px) {
     .modal-content {
-      width: 99%;
     }
   }
 

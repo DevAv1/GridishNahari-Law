@@ -74,25 +74,27 @@ export const Services = () => {
                             <li><img src={ListBullet} alt="service-list"/>  אמנת האג</li>
                             <li><img src={ListBullet} alt="service-list"/>  חוק הנוער</li>
                             <li><img src={ListBullet} alt="service-list"/>  צו הרחקה / הטרדה מאיימת</li>
-                            <li><img src={ListBullet} alt="service-list"/>  ייצוג בבית הדין ובבתי המשפט השונים</li>
+                            <li><img src={ListBullet} alt="service-list"/>  ייצוג בבית הדין ובבתי המשפט</li>
                             <li><img src={ListBullet} alt="service-list"/>  התרת נישואין</li>
-                            <li><img src={ListBullet} alt="service-list"/>  דוברת עברית ואנגלית</li>
                             <li><img src={ListBullet} alt="service-list"/>  צוואות</li>
                             <li><img src={ListBullet} alt="service-list"/>  ירושות</li>
-                            <li><img src={ListBullet} alt="service-list"/>  התנגדות לצוואה</li>
                             <li><img src={ListBullet} alt="service-list"/>  ידועים בציבור</li>
                         </ul>
                         {/* <span className="read-more" onClick={() => onReadMoreClick('FAMILY')}>קרא עוד</span> */}
                     </div>
                     <div className={`service-description ${servicesIndex === 2 && 'show'}`}>
                         <ul>
-                            <li><img src={ListBullet} alt="service-list"/> עסקאות מכר</li>
-                            <li><img src={ListBullet} alt="service-list"/>  שכירות</li>
-                            <li><img src={ListBullet} alt="service-list"/>  רישום הערות</li>
-                            <li><img src={ListBullet} alt="service-list"/>  בתים משותפים</li>
-                            <li><img src={ListBullet} alt="service-list"/>  מכתבי אזהרה</li>
-                            <li><img src={ListBullet} alt="service-list"/>  מיסוי מקרקעין</li>
-                            <li><img src={ListBullet} alt="service-list"/>  פינוי בינוי/תמ"א</li>
+                            <li><img src={ListBullet} alt="service-list"/>מכירה/רכישה של דירות יד שניה</li>
+                            <li><img src={ListBullet} alt="service-list"/>רכישת דירה מקבלן</li>
+                            <li><img src={ListBullet} alt="service-list"/>מגרשים</li>
+                            <li><img src={ListBullet} alt="service-list"/>בתים פרטיים</li>
+                            <li><img src={ListBullet} alt="service-list"/>הסכמי שכירות</li>
+                            <li><img src={ListBullet} alt="service-list"/>בחינת כדאיות להיתכנות פרויקט בהתחדשות עירונית</li>
+                            <li><img src={ListBullet} alt="service-list"/>עזרה בהתאגדות דיירים</li>
+                            <li><img src={ListBullet} alt="service-list"/>מכתבי אזהרה</li>
+                            <li><img src={ListBullet} alt="service-list"/>רישום בית משותף</li>
+                            <li><img src={ListBullet} alt="service-list"/>רישום הערות בטאבו</li>
+                      
                         </ul>
                         {/* <span className="read-more" onClick={() => onReadMoreClick('GROUND')}>קרא עוד</span> */}
                     </div>

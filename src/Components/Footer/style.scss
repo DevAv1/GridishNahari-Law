@@ -5,6 +5,7 @@
   color: #F3F3F3;
   padding: 0 12px;
   overflow: hidden;
+  position: relative;
   .footer-content-wrapper {
     display: flex;
     align-items: center;
@@ -31,6 +32,18 @@
             cursor: pointer;
           }
         }
+      }
+    }
+    .dev-credit{
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      bottom: 6px;
+      font-size: 12px;
+      font-weight: lighter;
+      a {
+        text-decoration: none;
+        color: inherit;
       }
     }
     @media screen and (max-width: 752px) {

@@ -31,6 +31,9 @@ export const Footer = () => {
                         <img src={Logo}/>
                     </div>
                 </div>
+                <div className="dev-credit">
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=avirevah32@gmail.com" target='_blank'>© Developed by @Avi Revah</a>
+                </div>
             </div>
         </div>
     )
